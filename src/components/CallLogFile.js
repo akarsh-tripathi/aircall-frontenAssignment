@@ -114,7 +114,7 @@ const ActivityFeed = () => {
     const groupedCalls = groupCallsByDate(calls);
 
     return (
-        <>
+        <div>
       
             <Button sx={{ width: '100%', marginTop: "1rem"}} size="large" variant="outlined" endIcon={<ArchiveIcon />} onClick={() => handleArchiveAll()}>
                 Archive All
@@ -165,7 +165,7 @@ const ActivityFeed = () => {
             </List>
             <CallDetail call={selectedCall} open={drawerOpen} onClose={handleCloseDrawer} />
 
-        </>
+        </div>
     );
 };
 

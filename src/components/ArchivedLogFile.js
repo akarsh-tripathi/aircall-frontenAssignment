@@ -7,7 +7,6 @@ import {
     CircularProgress,
     IconButton,
     Collapse,
-    ListSubheader,
     Badge,
     ListItemAvatar,
     Avatar,
@@ -115,7 +114,7 @@ const ArchivedCalls = () => {
     const groupedArchivedCalls = groupCallsByDate(archivedCalls);
 
     return (
-        <>
+        <div>
             <Button sx={{ width: '100%', marginTop: "1rem" }} size="large" variant="outlined" endIcon={<UnarchiveIcon />} onClick={() => handleUnarchiveAll()}>
                 Unarchive All
             </Button>
@@ -167,7 +166,7 @@ const ArchivedCalls = () => {
                 ))}
             </List>
             <CallDetail call={selectedCall} open={drawerOpen} onClose={handleCloseDrawer} />
-        </>
+        </div>
     );
 };
 

@@ -6,7 +6,7 @@ import CloseIcon from '@mui/icons-material/Close';
 import CallIcon from '@mui/icons-material/Call'; // For the call number
 import CalendarTodayIcon from '@mui/icons-material/CalendarToday'; // For the date
 import AccessTimeIcon from '@mui/icons-material/AccessTime'; // For time and duration
-import { formatDuration, formatTime, formatDate } from '../dateUtils'; // Import utility functions
+import { formatDuration, formatTime, formatDate } from '../util/handleDate.js'; // Import utility functions
 
 const CallDetail = ({ call, open, onClose }) => {
     if (!call) return null;

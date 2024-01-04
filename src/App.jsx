@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import ActivityFeed from './components/CallLogFile.js';
-import ArchivedCalls from './components/ArchivedCalls.js';
+import ArchivedCalls from './components/ArchivedLogFile.js';
 import Header from './Header.jsx';
 
 const App = () => {
