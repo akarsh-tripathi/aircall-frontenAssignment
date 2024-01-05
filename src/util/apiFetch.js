@@ -23,7 +23,7 @@ export const fetchCalls = async () => {
 // Archive a call
 export const archiveCall = async (callId) => {
     try {
-        await axios.patch(`${API_BASE_URL}/activities/${callId}`, {
+        await axios.patch(`https://cerulean-marlin-wig.cyclic.app//activities/${callId}`, {
             is_archived: true
         });
     } catch (error) {
@@ -35,7 +35,7 @@ export const archiveCall = async (callId) => {
 // Unarchive a call
 export const unarchiveCall = async (callId) => {
     try {
-        await axios.patch(`${API_BASE_URL}/activities/${callId}`, {
+        await axios.patch(`https://cerulean-marlin-wig.cyclic.app/activities/${callId}`, {
             is_archived: false
         });
     } catch (error) {
@@ -48,7 +48,7 @@ export const unarchiveCall = async (callId) => {
 export const archiveAllCalls = async (calls) => {
     try {
         const archivePromises = calls.map(call => {
-            return axios.patch(`${API_BASE_URL}/activities/${call.id}`, {
+            return axios.patch(`https://cerulean-marlin-wig.cyclic.app/activities/${call.id}`, {
                 is_archived: true
             });
         });
@@ -63,7 +63,7 @@ export const archiveAllCalls = async (calls) => {
 export const unarchiveAllCalls = async (calls) => {
     try {
         const unarchivePromises = calls.map(call => {
-            return axios.patch(`${API_BASE_URL}/activities/${call.id}`, {
+            return axios.patch(`https://cerulean-marlin-wig.cyclic.app/activities/${call.id}`, {
                 is_archived: false
             });
         });

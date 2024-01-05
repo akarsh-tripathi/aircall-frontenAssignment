@@ -1,12 +1,20 @@
 header {
   height: 40px;
-  margin: 0 auto;
-  padding: 20px 0;
-  text-align: center;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex; 
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  
 }
 
 header svg {
-  display: block;
-  width: 100%; height: 100%;
+  width: 101px;
+  height: 10rem;
+}
+
+.tabscontainer {
+  display: flex;
+  align-items: center;
 }
