@@ -1,4 +1,4 @@
-// Format the date to be more readable.
+import 'regenerator-runtime/runtime'
 export const formatDate = (dateString) => {
     return new Intl.DateTimeFormat('en-US', {
         month: 'long',
@@ -7,7 +7,6 @@ export const formatDate = (dateString) => {
     }).format(new Date(dateString));
 };
 
-// Function to format date object to time string
 export const formatTime = (dateString) => {
     return new Date(dateString).toLocaleTimeString([], { timeStyle: 'short' });
 };
@@ -25,10 +24,6 @@ export const formatDuration = (durationInSeconds) => {
     return result.trim();
 };
 
-
-
-
-// Function to group calls by date
 export const groupCallsByDate = (calls) => {
     const grouped = {};
     calls.forEach(call => {

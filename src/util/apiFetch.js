@@ -1,13 +1,15 @@
 import axios from 'axios';
+import 'regenerator-runtime/runtime'
 
-const API_BASE_URL = process.env.API_URL;
+const API_BASE_URL = process.env.REACT_APP_API_URL;
 
 // Fetch all calls
 export const fetchCalls = async () => {
     try {
-        const response = await axios.get(`${API_BASE_URL}/activities`);
+        //const response = await axios.get(`${API_BASE_URL}/activities`);
+        const response = await axios.get(`https://cerulean-marlin-wig.cyclic.app/activities`);
         const data = response.data;
-
+        console.log("api- ",API_BASE_URL);
         // Filter out calls that do not have both 'to' and 'from' values
         const validCalls = data.filter(call => call.to !== undefined && call.from !== undefined);
         return validCalls;

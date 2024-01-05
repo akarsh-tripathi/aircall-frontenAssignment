@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import ActivityFeed from './components/CallLogFile.js';
 import ArchivedCalls from './components/ArchivedLogFile.js';
 import Header from './Header.jsx';
+import { useState } from "react";
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState(0);

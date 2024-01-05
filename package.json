@@ -18,8 +18,10 @@
     "@mui/material": "^5.15.3",
     "axios": "^1.6.4",
     "babel-loader": "^7",
+    "process": "^0.11.10",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "regenerator-runtime": "^0.14.1"
   },
   "devDependencies": {
     "babel-core": "6.26.*",
