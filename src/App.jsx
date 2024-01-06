@@ -5,22 +5,22 @@ import ArchivedCalls from "./components/ArchivedLogFile.js";
 import Header from "./Header.jsx";
 import { useState } from "react";
 import Navbar from "./components/NavBar.js";
+import NumberPad from "./components/KeyPad.js";
 
 const App = () => {
   const [currentTab, setCurrentTab] = useState(0);
   const handleTabChange = (event, newValue) => {
     setCurrentTab(newValue);
   };
-
   return (
     <div className="container">
-      <div>
+      <div className="container-box">
         <Header
           className="header"
           currentTab={currentTab}
           handleTabChange={handleTabChange}
         />
-        <div className="containerval">
+        <div className="containerval" >
           {currentTab === 0 && <ActiveCallLogs />}
           {currentTab === 1 && <ArchivedCalls />}
         </div>

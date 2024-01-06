@@ -20,11 +20,11 @@ const NumberPad = ({ onNumberClick, onDelete, onClear, onSubmit }) => {
 
   const handleSubmit = () => {
     onSubmit && onSubmit(input);
-    // You can perform additional actions with the entered value
-    // For example, send it to a server, update state, etc.
   };
 
   return (
+    <div>
+    
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
         {[1, 2, 3, 4, 5, 6, 7, 8, 9, 0].map((number) => (
@@ -40,6 +40,7 @@ const NumberPad = ({ onNumberClick, onDelete, onClear, onSubmit }) => {
       <button style={{ marginTop: '8px' }} onClick={handleSubmit}>
         Submit
       </button>
+    </div>
     </div>
   );
 };
